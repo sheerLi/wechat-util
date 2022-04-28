@@ -1,0 +1,40 @@
+{
+  "name": "wechat-util",
+  "version": "1.0.0",
+  "description": "基于微信sdk封装的相关方法",
+  "main": "index.js",
+  "scripts": {
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sheerLi/wechat-util.git"
+  },
+  "keywords": [
+    "wechat",
+    "typescript"
+  ],
+  "author": "sheerLi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sheerLi/wechat-util/issues"
+  },
+  "homepage": "https://github.com/sheerLi/wechat-util#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.4",
+    "@commitlint/config-conventional": "^16.2.4",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-customizable": "^6.3.0",
+    "husky": "^7.0.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
