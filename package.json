@@ -2,9 +2,14 @@
   "name": "wechat-util",
   "version": "1.0.0",
   "description": "基于微信sdk封装的相关方法",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "types"
+  ],
   "scripts": {
-    "log": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
+    "build": "rimraf dist types && gulp" ,
+    "log": "rimraf CHANGELOG.md && conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "repository": {
     "type": "git",
@@ -25,7 +30,12 @@
     "@commitlint/config-conventional": "^16.2.4",
     "conventional-changelog-cli": "^2.2.2",
     "cz-customizable": "^6.3.0",
-    "husky": "^7.0.4"
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "husky": "^7.0.4",
+    "merge2": "^1.4.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
   },
   "config": {
     "commitizen": {
